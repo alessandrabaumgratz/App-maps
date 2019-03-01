@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>home </ion-title>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div id="floating-panel">
+    <b>Start: </b> 
+    <select [(ngModel)]= "start" id="start">
+      <option value="Chicago, IL">Chicago</option>
+      <option value="st louis, mo">St Louis</option>
+      <option value="joplin, mo">joplin, MO</option>
+      <option value="oklahoma city, ok">oklahoma city</option>
+    </select>
+    <br>
+    <b>End: </b>
+    <select [(ngModel)]= "end" id= "end">
+        <option value="Chicago, IL">Chicago</option>
+        <option value="st louis, mo">St Louis</option>
+        <option value="joplin, mo">joplin, MO</option>
+        <option value="oklahoma city, ok">oklahoma city</option>
+    </select>
+    
+    <button ion-button block (click)= "calculateAndDisplayRoute()" >Generate</button>
+  </div> 
+  <div #map id="map"></div>
+</ion-content>
